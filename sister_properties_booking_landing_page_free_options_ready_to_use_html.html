@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Book Our Sister Properties | Lowcountry Hotels</title>
+  <meta name="description" content="One simple page with links to book any of our sister properties in the Charleston area." />
+  <style>
+    :root{
+      --bg:#f8fafc; --card:#ffffff; --text:#0f172a; --muted:#475569; --brand:#0ea5e9; --brand-2:#0ea5e9; --ring:rgba(14,165,233,.35);
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font:16px/1.5 system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial,sans-serif}
+    a{color:var(--brand);text-decoration:none}
+    .container{max-width:1100px;margin:0 auto;padding:28px}
+    header{display:flex;flex-wrap:wrap;gap:14px;align-items:center;justify-content:space-between;margin-bottom:22px}
+    .brand{display:flex;gap:12px;align-items:center}
+    .brand img{width:42px;height:42px;border-radius:10px}
+    h1{font-size:clamp(22px,2.6vw,30px);margin:0}
+    .subtitle{color:var(--muted);font-size:14px}
+    .notice{background:#e6f6fe;border:1px solid var(--ring);padding:12px 14px;border-radius:12px;margin:14px 0;font-size:14px}
+    .grid{display:grid;grid-template-columns:repeat(12,1fr);gap:18px}
+    .card{grid-column:span 12;background:var(--card);border:1px solid #e5e7eb;border-radius:16px;overflow:hidden;box-shadow:0 2px 14px rgba(2,6,23,.06)}
+    @media(min-width:720px){.card{grid-column:span 6}}
+    @media(min-width:1024px){.card{grid-column:span 4}}
+    .cover{aspect-ratio:16/9;background:#cbd5e1;display:block;width:100%;object-fit:cover}
+    .pad{padding:16px}
+    .hotel-name{font-weight:700;font-size:18px;margin:0}
+    .meta{color:var(--muted);font-size:14px;margin:6px 0 0}
+    .btns{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px}
+    .btn{display:inline-flex;align-items:center;gap:8px;padding:10px 14px;border-radius:999px;border:1px solid #e5e7eb;background:#fff;cursor:pointer}
+    .btn.primary{background:var(--brand);border-color:var(--brand);color:#fff}
+    .btn:focus{outline:3px solid var(--ring)}
+    footer{margin:26px 0 12px;color:var(--muted);font-size:13px}
+    .grouping{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+    .search{flex:1;min-width:240px;display:flex;align-items:center;gap:8px;background:#fff;border:1px solid #e5e7eb;padding:10px 12px;border-radius:12px}
+    .search input{border:none;flex:1;outline:none;font-size:14px}
+    .hidden{display:none}
+    .tag{font-size:12px;padding:6px 10px;border:1px solid #e5e7eb;border-radius:999px;background:#fff;cursor:pointer}
+    .tag.active{background:#eef6ff;border-color:var(--brand);color:var(--brand)}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <!-- Replace with your logo if you have one -->
+        <img src="https://dummyimage.com/96x96/0ea5e9/ffffff&text=LH" alt="Lowcountry Hotels logo" />
+        <div>
+          <h1>Book Our Sister Properties</h1>
+          <div class="subtitle">One simple place to jump to the hotel you want. Click a property to book instantly.</div>
+        </div>
+      </div>
+      <div class="grouping">
+        <label class="search" aria-label="Filter hotels">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M21 21l-4.3-4.3" stroke="#334155" stroke-width="2" stroke-linecap="round"/><circle cx="11" cy="11" r="7" stroke="#334155" stroke-width="2" fill="none"/></svg>
+          <input id="q" placeholder="Search by name or neighborhood…" />
+        </label>
+        <button class="tag active" data-tag="all">All</button>
+        <button class="tag" data-tag="airport">Airport</button>
+        <button class="tag" data-tag="downtown">Downtown</button>
+        <button class="tag" data-tag="mtp">Mount Pleasant</button>
+      </div>
+    </header>
+
+    <div class="notice">Tip: You can use this same page for QR codes on flyers or email signatures. Just print the QR that points to this URL.</div>
+
+    <section class="grid" id="hotels">
+      <!-- ===== PROPERTY CARD TEMPLATE =====
+        Duplicate a <article class="card"> block per hotel and replace placeholder content.
+      -->
+
+      <!-- Holiday Inn Express & Suites – Charleston Airport -->
+      <article class="card" data-tags="airport">
+        <img class="cover" src="https://images.unsplash.com/photo-1501117716987-c8e02464f5d4?q=80&w=1200&auto=format&fit=crop" alt="Hotel exterior" />
+        <div class="pad">
+          <h2 class="hotel-name">Holiday Inn Express &amp; Suites – Charleston Airport &amp; Convention Center</h2>
+          <p class="meta">3025 W Montague Ave, North Charleston, SC • (843) 554‑2100</p>
+          <div class="btns">
+            <a class="btn primary" href="https://www.ihg.com/holidayinnexpress/hotels/us/en/north-charleston/chsna/hoteldetail" target="_blank" rel="noopener">Book Now</a>
+            <a class="btn" href="tel:+18435542100">Call</a>
+            <a class="btn" href="https://maps.google.com/?q=3025+W+Montague+Ave+North+Charleston+SC" target="_blank" rel="noopener">Directions</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Sister Property Example: Hilton Garden Inn (replace with actual) -->
+      <article class="card" data-tags="airport">
+        <img class="cover" src="https://images.unsplash.com/photo-1568495248636-6432b97bd949?q=80&w=1200&auto=format&fit=crop" alt="Hotel lobby" />
+        <div class="pad">
+          <h2 class="hotel-name">Hilton Garden Inn – Charleston Airport</h2>
+          <p class="meta">5265 International Blvd, North Charleston, SC • (843) 308‑9330</p>
+          <div class="btns">
+            <a class="btn primary" href="https://www.hilton.com/en/hotels/chscarh-hilton-garden-inn-charleston-airport/" target="_blank" rel="noopener">Book Now</a>
+            <a class="btn" href="tel:+18433089330">Call</a>
+            <a class="btn" href="https://maps.google.com/?q=5265+International+Blvd+North+Charleston+SC" target="_blank" rel="noopener">Directions</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Sister Property Example: DoubleTree -->
+      <article class="card" data-tags="downtown">
+        <img class="cover" src="https://images.unsplash.com/photo-1542315192-1f61a14549b4?q=80&w=1200&auto=format&fit=crop" alt="Guest room" />
+        <div class="pad">
+          <h2 class="hotel-name">DoubleTree by Hilton – Charleston (Example)</h2>
+          <p class="meta">181 Church St, Charleston, SC • (843) 577‑2644</p>
+          <div class="btns">
+            <a class="btn primary" href="https://www.hilton.com/en/brands/doubletree/" target="_blank" rel="noopener">Book Now</a>
+            <a class="btn" href="tel:+18435772644">Call</a>
+            <a class="btn" href="https://maps.google.com/?q=181+Church+St+Charleston+SC" target="_blank" rel="noopener">Directions</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Sister Property Example: Avid/Garner (replace) -->
+      <article class="card" data-tags="mtp">
+        <img class="cover" src="https://images.unsplash.com/photo-1528901166007-3784c7dd3653?q=80&w=1200&auto=format&fit=crop" alt="Hotel exterior night" />
+        <div class="pad">
+          <h2 class="hotel-name">Garner Hotel – Mount Pleasant (Example)</h2>
+          <p class="meta">123 Example Rd, Mount Pleasant, SC • (843) 555‑1212</p>
+          <div class="btns">
+            <a class="btn primary" href="#" target="_blank" rel="noopener">Book Now</a>
+            <a class="btn" href="tel:+18435551212">Call</a>
+            <a class="btn" href="https://maps.google.com/?q=123+Example+Rd+Mount+Pleasant+SC" target="_blank" rel="noopener">Directions</a>
+          </div>
+        </div>
+      </article>
+
+    </section>
+
+    <footer>
+      <p>Questions or group blocks? Email <a href="mailto:sleuty@lowcountryhotels.com">sleuty@lowcountryhotels.com</a>. For immediate assistance call the front desk at (843) 554‑2100 ext. 3.</p>
+    </footer>
+  </div>
+
+  <script>
+    // Simple search + tag filter (no libraries needed)
+    const q = document.getElementById('q');
+    const cards = [...document.querySelectorAll('#hotels .card')];
+    const tags = [...document.querySelectorAll('.tag')];
+
+    function applyFilters(){
+      const term = (q.value || '').toLowerCase();
+      const activeTag = document.querySelector('.tag.active')?.dataset.tag || 'all';
+      cards.forEach(card=>{
+        const name = card.querySelector('.hotel-name').textContent.toLowerCase();
+        const meta = card.querySelector('.meta').textContent.toLowerCase();
+        const matchesText = !term || name.includes(term) || meta.includes(term);
+        const matchesTag = activeTag==='all' || (card.dataset.tags||'').split(',').includes(activeTag);
+        card.style.display = matchesText && matchesTag ? '' : 'none';
+      })
+    }
+
+    q.addEventListener('input', applyFilters);
+    tags.forEach(t=>t.addEventListener('click', ()=>{
+      tags.forEach(x=>x.classList.remove('active'));
+      t.classList.add('active');
+      applyFilters();
+    }))
+
+    applyFilters();
+  </script>
+</body>
+</html>
